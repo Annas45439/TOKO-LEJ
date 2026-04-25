@@ -1,0 +1,652 @@
+DEBUG - 2026-04-25 04:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-25 05:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-25 05:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-25 05:18:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-25 05:18:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-25 05:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-25 05:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-25 05:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-25 05:19:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-25 05:19:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-25 05:22:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-25 05:26:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-25 05:26:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-25 05:27:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-25 05:27:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-25 05:27:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-25 05:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-25 05:28:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-25 05:28:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-25 05:28:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-25 05:28:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-04-25 05:30:57 --> Cannot add foreign key constraint
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('CREATE TABLE `tb_products` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`category_id` INT(11) UNSIGNED NOT NULL,
+	`unit_id` INT(11) UNSIGNED NOT NULL,
+	`name` VARCHAR(120) NOT NULL,
+	`price` DECIMAL(15,2) NOT NULL DEFAULT 0,
+	`buy_price` DECIMAL(15,2) NOT NULL DEFAULT 0,
+	`stock` INT(11) NOT NULL DEFAULT 0,
+	`min_stock` INT(11) NOT NULL DEFAULT 0,
+	`description` TEXT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_tb_products` PRIMARY KEY(`id`),
+	CONSTRAINT `tb_products_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `tb_categories`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+	CONSTRAINT `tb_products_unit_id_foreign` FOREIGN KEY (`unit_id`) REFERENCES `tb_units`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+	UNIQUE KEY `uq_tb_products_name` (`name`),
+	KEY `category_id` (`category_id`),
+	KEY `unit_id` (`unit_id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `tb_products` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`category_id` INT(11) UNSIGNED NOT NULL,
+	`unit_id` INT(11) UNSIGNED NOT NULL,
+	`name` VARCHAR(120) NOT NULL,
+	`price` DECIMAL(15,2) NOT NULL DEFAULT 0,
+	`buy_price` DECIMAL(15,2) NOT NULL DEFAULT 0,
+	`stock` INT(11) NOT NULL DEFAULT 0,
+	`min_stock` INT(11) NOT NULL DEFAULT 0,
+	`description` TEXT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_tb_products` PRIMARY KEY(`id`),
+	CONSTRAINT `tb_products_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `tb_categories`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+	CONSTRAINT `tb_products_unit_id_foreign` FOREIGN KEY (`unit_id`) REFERENCES `tb_units`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+	UNIQUE KEY `uq_tb_products_name` (`name`),
+	KEY `category_id` (`category_id`),
+	KEY `unit_id` (`unit_id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `tb_products` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`category_id` INT(11) UNSIGNED NOT NULL,
+	`unit_id` INT(11) UNSIGNED NOT NULL,
+	`name` VARCHAR(120) NOT NULL,
+	`price` DECIMAL(15,2) NOT NULL DEFAULT 0,
+	`buy_price` DECIMAL(15,2) NOT NULL DEFAULT 0,
+	`stock` INT(11) NOT NULL DEFAULT 0,
+	`min_stock` INT(11) NOT NULL DEFAULT 0,
+	`description` TEXT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_tb_products` PRIMARY KEY(`id`),
+	CONSTRAINT `tb_products_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `tb_categories`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+	CONSTRAINT `tb_products_unit_id_foreign` FOREIGN KEY (`unit_id`) REFERENCES `tb_units`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+	UNIQUE KEY `uq_tb_products_name` (`name`),
+	KEY `category_id` (`category_id`),
+	KEY `unit_id` (`unit_id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 4 SYSTEMPATH\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `tb_products` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`category_id` INT(11) UNSIGNED NOT NULL,
+	`unit_id` INT(11) UNSIGNED NOT NULL,
+	`name` VARCHAR(120) NOT NULL,
+	`price` DECIMAL(15,2) NOT NULL DEFAULT 0,
+	`buy_price` DECIMAL(15,2) NOT NULL DEFAULT 0,
+	`stock` INT(11) NOT NULL DEFAULT 0,
+	`min_stock` INT(11) NOT NULL DEFAULT 0,
+	`description` TEXT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_tb_products` PRIMARY KEY(`id`),
+	CONSTRAINT `tb_products_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `tb_categories`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+	CONSTRAINT `tb_products_unit_id_foreign` FOREIGN KEY (`unit_id`) REFERENCES `tb_units`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+	UNIQUE KEY `uq_tb_products_name` (`name`),
+	KEY `category_id` (`category_id`),
+	KEY `unit_id` (`unit_id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 5 APPPATH\Database\Migrations\2026-04-21-000001_CreateMasterProdukTables.php(154): CodeIgniter\Database\Forge->createTable('tb_products', true)
+ 6 APPPATH\Database\Migrations\2026-04-21-000001_CreateMasterProdukTables.php(13): App\Database\Migrations\CreateMasterProdukTables->createProductsTable()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(1014): App\Database\Migrations\CreateMasterProdukTables->up()
+ 8 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+ 9 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(null)
+10 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::{closure:CodeIgniter\Commands\Database\Migrate::run():88}()
+11 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+12 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run([...])
+13 SYSTEMPATH\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate', [...])
+14 SYSTEMPATH\Commands\Database\MigrateRefresh.php(91): CodeIgniter\CLI\BaseCommand->call('migrate', [...])
+15 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRefresh->{closure:CodeIgniter\Commands\Database\MigrateRefresh::run():89}()
+16 SYSTEMPATH\Commands\Database\MigrateRefresh.php(89): CodeIgniter\Commands\Database\MigrateRefresh->withSignalsBlocked(Object(Closure))
+17 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateRefresh->run([...])
+18 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:refresh', [])
+19 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+20 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+21 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-04-25 05:30:57 --> Table 'db_toko_lej.tb_products' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `tb_products`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `tb_products`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `tb_products`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `tb_products`', [], false)
+ 5 APPPATH\Database\Seeds\TransaksiRealSeeder.php(54): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 APPPATH\Database\Seeds\TransaksiRealSeeder.php(17): App\Database\Seeds\TransaksiRealSeeder->seedProducts(Object(CodeIgniter\Database\MySQLi\Connection), '2026-04-25 05:30:57')
+ 7 SYSTEMPATH\Database\Seeder.php(155): App\Database\Seeds\TransaksiRealSeeder->run()
+ 8 SYSTEMPATH\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\TransaksiRealSeeder')
+ 9 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\Seed->run([])
+10 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+11 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+12 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+13 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-04-25 05:31:28 --> Table 'db_toko_lej.tb_products' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `tb_products`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `tb_products`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `tb_products`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `tb_products`', [], false)
+ 5 APPPATH\Database\Seeds\TransaksiRealSeeder.php(54): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 APPPATH\Database\Seeds\TransaksiRealSeeder.php(17): App\Database\Seeds\TransaksiRealSeeder->seedProducts(Object(CodeIgniter\Database\MySQLi\Connection), '2026-04-25 05:31:28')
+ 7 SYSTEMPATH\Database\Seeder.php(155): App\Database\Seeds\TransaksiRealSeeder->run()
+ 8 SYSTEMPATH\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\TransaksiRealSeeder')
+ 9 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\Seed->run([])
+10 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+11 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+12 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+13 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-04-25 05:31:37 --> Cannot add foreign key constraint
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('CREATE TABLE `tb_products` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`category_id` INT(11) UNSIGNED NOT NULL,
+	`unit_id` INT(11) UNSIGNED NOT NULL,
+	`name` VARCHAR(120) NOT NULL,
+	`price` DECIMAL(15,2) NOT NULL DEFAULT 0,
+	`buy_price` DECIMAL(15,2) NOT NULL DEFAULT 0,
+	`stock` INT(11) NOT NULL DEFAULT 0,
+	`min_stock` INT(11) NOT NULL DEFAULT 0,
+	`description` TEXT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_tb_products` PRIMARY KEY(`id`),
+	CONSTRAINT `tb_products_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `tb_categories`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+	CONSTRAINT `tb_products_unit_id_foreign` FOREIGN KEY (`unit_id`) REFERENCES `tb_units`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+	UNIQUE KEY `uq_tb_products_name` (`name`),
+	KEY `category_id` (`category_id`),
+	KEY `unit_id` (`unit_id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `tb_products` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`category_id` INT(11) UNSIGNED NOT NULL,
+	`unit_id` INT(11) UNSIGNED NOT NULL,
+	`name` VARCHAR(120) NOT NULL,
+	`price` DECIMAL(15,2) NOT NULL DEFAULT 0,
+	`buy_price` DECIMAL(15,2) NOT NULL DEFAULT 0,
+	`stock` INT(11) NOT NULL DEFAULT 0,
+	`min_stock` INT(11) NOT NULL DEFAULT 0,
+	`description` TEXT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_tb_products` PRIMARY KEY(`id`),
+	CONSTRAINT `tb_products_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `tb_categories`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+	CONSTRAINT `tb_products_unit_id_foreign` FOREIGN KEY (`unit_id`) REFERENCES `tb_units`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+	UNIQUE KEY `uq_tb_products_name` (`name`),
+	KEY `category_id` (`category_id`),
+	KEY `unit_id` (`unit_id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `tb_products` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`category_id` INT(11) UNSIGNED NOT NULL,
+	`unit_id` INT(11) UNSIGNED NOT NULL,
+	`name` VARCHAR(120) NOT NULL,
+	`price` DECIMAL(15,2) NOT NULL DEFAULT 0,
+	`buy_price` DECIMAL(15,2) NOT NULL DEFAULT 0,
+	`stock` INT(11) NOT NULL DEFAULT 0,
+	`min_stock` INT(11) NOT NULL DEFAULT 0,
+	`description` TEXT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_tb_products` PRIMARY KEY(`id`),
+	CONSTRAINT `tb_products_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `tb_categories`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+	CONSTRAINT `tb_products_unit_id_foreign` FOREIGN KEY (`unit_id`) REFERENCES `tb_units`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+	UNIQUE KEY `uq_tb_products_name` (`name`),
+	KEY `category_id` (`category_id`),
+	KEY `unit_id` (`unit_id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 4 SYSTEMPATH\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `tb_products` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`category_id` INT(11) UNSIGNED NOT NULL,
+	`unit_id` INT(11) UNSIGNED NOT NULL,
+	`name` VARCHAR(120) NOT NULL,
+	`price` DECIMAL(15,2) NOT NULL DEFAULT 0,
+	`buy_price` DECIMAL(15,2) NOT NULL DEFAULT 0,
+	`stock` INT(11) NOT NULL DEFAULT 0,
+	`min_stock` INT(11) NOT NULL DEFAULT 0,
+	`description` TEXT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_tb_products` PRIMARY KEY(`id`),
+	CONSTRAINT `tb_products_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `tb_categories`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+	CONSTRAINT `tb_products_unit_id_foreign` FOREIGN KEY (`unit_id`) REFERENCES `tb_units`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+	UNIQUE KEY `uq_tb_products_name` (`name`),
+	KEY `category_id` (`category_id`),
+	KEY `unit_id` (`unit_id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 5 APPPATH\Database\Migrations\2026-04-21-000001_CreateMasterProdukTables.php(154): CodeIgniter\Database\Forge->createTable('tb_products', true)
+ 6 APPPATH\Database\Migrations\2026-04-21-000001_CreateMasterProdukTables.php(13): App\Database\Migrations\CreateMasterProdukTables->createProductsTable()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(1014): App\Database\Migrations\CreateMasterProdukTables->up()
+ 8 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+ 9 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(null)
+10 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::{closure:CodeIgniter\Commands\Database\Migrate::run():88}()
+11 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+12 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run([])
+13 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', [])
+14 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+15 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+16 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-04-25 05:31:37 --> Table 'db_toko_lej.tb_products' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `tb_products`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `tb_products`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `tb_products`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `tb_products`', [], false)
+ 5 APPPATH\Database\Seeds\TransaksiRealSeeder.php(54): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 APPPATH\Database\Seeds\TransaksiRealSeeder.php(17): App\Database\Seeds\TransaksiRealSeeder->seedProducts(Object(CodeIgniter\Database\MySQLi\Connection), '2026-04-25 05:31:37')
+ 7 SYSTEMPATH\Database\Seeder.php(155): App\Database\Seeds\TransaksiRealSeeder->run()
+ 8 SYSTEMPATH\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\TransaksiRealSeeder')
+ 9 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\Seed->run([])
+10 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+11 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+12 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+13 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-04-25 05:31:50 --> Table 'db_toko_lej.tb_products' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `tb_products`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `tb_products`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `tb_products`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `tb_products`', [], false)
+ 5 APPPATH\Database\Seeds\TransaksiRealSeeder.php(54): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 APPPATH\Database\Seeds\TransaksiRealSeeder.php(17): App\Database\Seeds\TransaksiRealSeeder->seedProducts(Object(CodeIgniter\Database\MySQLi\Connection), '2026-04-25 05:31:50')
+ 7 SYSTEMPATH\Database\Seeder.php(155): App\Database\Seeds\TransaksiRealSeeder->run()
+ 8 SYSTEMPATH\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\TransaksiRealSeeder')
+ 9 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\Seed->run([])
+10 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+11 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+12 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+13 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+DEBUG - 2026-04-25 05:36:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-04-25 05:36:21 --> Table 'db_toko_lej.tb_products' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT *
+FROM `tb_products`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tb_products`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tb_products`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_products`', [], false)
+ 5 SYSTEMPATH\Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Prediksi.php(102): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Prediksi.php(67): App\Controllers\Prediksi->generateQuickOverview()
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Prediksi->index()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prediksi))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-25 05:36:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_toko_lej.tb_products' doesn't exist
+[Method: GET, Route: prediksi]
+in SYSTEMPATH\Database\BaseConnection.php on line 865.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_products`', [], false)
+ 2 SYSTEMPATH\Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Prediksi.php(102): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Prediksi.php(67): App\Controllers\Prediksi->generateQuickOverview()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Prediksi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prediksi))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-25 05:36:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_toko_lej.tb_products' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tb_products`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tb_products`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_products`', [], false)
+ 4 SYSTEMPATH\Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Prediksi.php(102): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Prediksi.php(67): App\Controllers\Prediksi->generateQuickOverview()
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Prediksi->index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prediksi))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-25 05:36:21 --> [Caused by] mysqli_sql_exception: Table 'db_toko_lej.tb_products' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT *
+FROM `tb_products`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tb_products`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tb_products`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_products`', [], false)
+ 5 SYSTEMPATH\Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Prediksi.php(102): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Prediksi.php(67): App\Controllers\Prediksi->generateQuickOverview()
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Prediksi->index()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prediksi))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-04-25 05:36:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-04-25 05:36:31 --> Table 'db_toko_lej.tb_products' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT *
+FROM `tb_products`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tb_products`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tb_products`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_products`', [], false)
+ 5 SYSTEMPATH\Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Prediksi.php(102): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Prediksi.php(67): App\Controllers\Prediksi->generateQuickOverview()
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Prediksi->index()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prediksi))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-25 05:36:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_toko_lej.tb_products' doesn't exist
+[Method: GET, Route: prediksi]
+in SYSTEMPATH\Database\BaseConnection.php on line 865.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_products`', [], false)
+ 2 SYSTEMPATH\Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Prediksi.php(102): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Prediksi.php(67): App\Controllers\Prediksi->generateQuickOverview()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Prediksi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prediksi))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-25 05:36:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_toko_lej.tb_products' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tb_products`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tb_products`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_products`', [], false)
+ 4 SYSTEMPATH\Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Prediksi.php(102): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Prediksi.php(67): App\Controllers\Prediksi->generateQuickOverview()
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Prediksi->index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prediksi))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-25 05:36:31 --> [Caused by] mysqli_sql_exception: Table 'db_toko_lej.tb_products' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT *
+FROM `tb_products`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tb_products`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tb_products`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_products`', [], false)
+ 5 SYSTEMPATH\Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Prediksi.php(102): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Prediksi.php(67): App\Controllers\Prediksi->generateQuickOverview()
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Prediksi->index()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Prediksi))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-04-25 05:36:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-04-25 05:36:45 --> Table 'db_toko_lej.tb_products' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC', [], false)
+ 5 APPPATH\Controllers\StokMasuk.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StokMasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-25 05:36:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_toko_lej.tb_products' doesn't exist
+[Method: GET, Route: stok-masuk]
+in SYSTEMPATH\Database\BaseConnection.php on line 865.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC', [], false)
+ 2 APPPATH\Controllers\StokMasuk.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StokMasuk->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokMasuk))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-25 05:36:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_toko_lej.tb_products' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC', [], false)
+ 4 APPPATH\Controllers\StokMasuk.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StokMasuk->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokMasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-25 05:36:45 --> [Caused by] mysqli_sql_exception: Table 'db_toko_lej.tb_products' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC', [], false)
+ 5 APPPATH\Controllers\StokMasuk.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StokMasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-04-25 05:44:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-04-25 05:44:05 --> Table 'db_toko_lej.tb_products' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC', [], false)
+ 5 APPPATH\Controllers\StokMasuk.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StokMasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-25 05:44:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_toko_lej.tb_products' doesn't exist
+[Method: GET, Route: stok-masuk]
+in SYSTEMPATH\Database\BaseConnection.php on line 865.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC', [], false)
+ 2 APPPATH\Controllers\StokMasuk.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StokMasuk->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokMasuk))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-25 05:44:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_toko_lej.tb_products' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC', [], false)
+ 4 APPPATH\Controllers\StokMasuk.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StokMasuk->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokMasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-25 05:44:05 --> [Caused by] mysqli_sql_exception: Table 'db_toko_lej.tb_products' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC', [], false)
+ 5 APPPATH\Controllers\StokMasuk.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StokMasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-04-25 05:44:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-04-25 05:44:06 --> Table 'db_toko_lej.tb_products' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC', [], false)
+ 5 APPPATH\Controllers\StokMasuk.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StokMasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-25 05:44:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_toko_lej.tb_products' doesn't exist
+[Method: GET, Route: stok-masuk]
+in SYSTEMPATH\Database\BaseConnection.php on line 865.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC', [], false)
+ 2 APPPATH\Controllers\StokMasuk.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StokMasuk->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokMasuk))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-25 05:44:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_toko_lej.tb_products' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC', [], false)
+ 4 APPPATH\Controllers\StokMasuk.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StokMasuk->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokMasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-25 05:44:06 --> [Caused by] mysqli_sql_exception: Table 'db_toko_lej.tb_products' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `name`, `stock`, `min_stock`
+FROM `tb_products`
+ORDER BY `name` ASC', [], false)
+ 5 APPPATH\Controllers\StokMasuk.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StokMasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
